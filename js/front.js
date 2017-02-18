@@ -209,6 +209,8 @@ $('#filter a').click(function (e) {
     var categoryToFilter = $(this).attr('data-filter');
 
     $('.reference-item').each(function () {
+    // var categories = $(this).data('category').split(' ');
+    // console.log(categories);    
 	if ($(this).data('category') === categoryToFilter || categoryToFilter === 'all') {
 	    $(this).removeClass('hidden');
 	}
