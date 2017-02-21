@@ -9,11 +9,10 @@ $(function () {
     fullScreenContainer();
     utils();
     sliding();
-    contactForm();
-    map();
+    // contactForm();
+    // map();
     counters();
     parallax();
-    demo();
 });
 
 $(window).load(function () {
@@ -414,24 +413,24 @@ function waypointsRefresh() {
 /* ajax contact form */
 
 function contactForm() {
- //    $("#contact-form").submit(function () {
+    $("#contact-form").submit(function () {
 
-	// var url = "contact.php"; // the script where you handle the form input.
+	var url = "contact.php"; // the script where you handle the form input.
 
-	// $.ajax({
-	//     type: "POST",
-	//     url: url,
-	//     data: $(this).serialize(), // serializes the form's elements.
-	//     success: function (data)
-	//     {
-	// 	var messageAlert = 'alert-' + data.type;
-	// 	var messageText = data.message;
-	// 	var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable animated bounceIn"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-	// 	if (messageAlert && messageText) {
-	// 	    $('#contact-form').find('.messages').html(alertBox);
-	// 	}
-	//     }
-	// });
-	// return false; // avoid to execute the actual submit of the form.
- //    });
+	$.ajax({
+	    type: "POST",
+	    url: url,
+	    data: $(this).serialize(), // serializes the form's elements.
+	    success: function (data)
+	    {
+		var messageAlert = 'alert-' + data.type;
+		var messageText = data.message;
+		var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable animated bounceIn"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+		if (messageAlert && messageText) {
+		    $('#contact-form').find('.messages').html(alertBox);
+		}
+	    }
+	});
+	return false; // avoid to execute the actual submit of the form.
+    });
 }
