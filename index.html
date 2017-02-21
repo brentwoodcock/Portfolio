@@ -241,7 +241,7 @@ _________________________________________________________ -->
                         </div>
 
                         <div class="col-md-4" data-animate="fadeInUp">
-                            <div class="icon"><i class="fa fa-tachometer"></i> 
+                            <div class="icon"><i class="fa fa-database"></i> 
                             </div>
                             <h3 class="heading">Back End</h3>
                             
@@ -331,7 +331,7 @@ _________________________________________________________ -->
 
                                     <p class="buttons">
                                         <a class="btn btn-primary" target="_blank" href="https://intense-cliffs-13598.herokuapp.com/"><i class="fa fa-globe"></i> Visit website</a>
-                                        <a class="btn btn-primary" href="https://github.com/slsriehl/brisket-app"><i class="fa fa-code"></i> View source code</a>
+                                        <a class="btn btn-primary" target="_blank" href="https://github.com/slsriehl/brisket-app"><i class="fa fa-github"></i> View source code</a>
                                     </p>
                                 </div>
                             </div>
@@ -354,8 +354,8 @@ _________________________________________________________ -->
                                     <p class="text-center"><b>HTML &sdot; CSS &sdot; JavaScript &sdot; jQuery &sdot; Bootstrap</b></p>
 
                                     <p class="buttons">
-                                        <a class="btn btn-primary" href="https://shrouded-tundra-81630.herokuapp.com/"><i class="fa fa-globe"></i> Visit website</a>
-                                        <a class="btn btn-primary" href="https://github.com/brentwoodcock/week-3-game"><i class="fa fa-code"></i> View source code</a>
+                                        <a class="btn btn-primary" target="_blank" href="https://shrouded-tundra-81630.herokuapp.com/"><i class="fa fa-globe"></i> Visit website</a>
+                                        <a class="btn btn-primary" target="_blank" href="https://github.com/brentwoodcock/week-3-game"><i class="fa fa-github"></i> View source code</a>
                                     </p>
                                 </div>
                             </div>
@@ -379,8 +379,7 @@ _________________________________________________________ -->
                                     <p class="text-center"><b>JavaScript &sdot; Node.js &sdot; MySQL &sdot; Inquirer</b></p>
 
                                     <p class="buttons">
-                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-globe"></i> Visit website</a>
-                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-download"></i> Download case study</a>
+                                        <a class="btn btn-primary" target="_blank" href="https://github.com/brentwoodcock/Bamazon"><i class="fa fa-github"></i> View source code</a>
                                     </p>
                                 </div>
 
@@ -407,8 +406,8 @@ _________________________________________________________ -->
                                         talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
 
                                     <p class="buttons">
-                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-globe"></i> Visit website</a>
-                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-download"></i> Download case study</a>
+                                        <a class="btn btn-primary" target="_blank" href="javascript:void(0);"><i class="fa fa-globe"></i> Visit website</a>
+                                        <a class="btn btn-primary" target="_blank" href="javascript:void(0);"><i class="fa fa-download"></i> Download case study</a>
                                     </p>
                                 </div>
                             </div>
@@ -678,7 +677,8 @@ _________________________________________________________ -->
                     <div class="row">
 
                         <div class="col-md-8 col-md-offset-2">
-                            <form id="contact-form" method="post" action="contact.php">
+                        <!-- https://docs.google.com/forms/d/e/1FAIpQLScTJ0-uhmrkFFjIhUZLcejsr1zwfHhRjlK2kON5rMQ5oBqatw/viewform?entry.1555534569=test+First&entry.206723699=test+Last&entry.2143810663=test@gmail.com&entry.1758565604=210+754+8334&entry.1010488127=this+is+my+test+message. -->
+                            <form name="contact-form" id="contact-form" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScTJ0-uhmrkFFjIhUZLcejsr1zwfHhRjlK2kON5rMQ5oBqatw/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
 
                                 <div class="messages">
 
@@ -688,19 +688,19 @@ _________________________________________________________ -->
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="name" class="form-control" placeholder="First name *" required="required">
+                                            <input type="text" name="entry.1555534569" id="entry.1555534569" class="form-control" placeholder="First name *" required="required">
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" name="surname" class="form-control" placeholder="Last name *" required="required">
+                                            <input type="text" name="entry.206723699" id="entry.206723699" class="form-control" placeholder="Last name *" required="required">
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" name="email" class="form-control" placeholder="Email *" required="required">
+                                            <input type="text" name="entry.2143810663" id="entry.2143810663" class="form-control" placeholder="Email *" required="required">
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" name="phone" class="form-control" placeholder="Phone number">
+                                            <input type="text" name="entry.1758565604" id="entry.1758565604" class="form-control" placeholder="Phone number">
                                         </div>
                                         <div class="col-md-12">
-                                            <textarea name="message" class="form-control" placeholder="Message *" rows="4" required="required"></textarea>
+                                            <textarea name="entry.1010488127" id="entry.1010488127" class="form-control" placeholder="Message *" rows="4" required="required"></textarea>
                                         </div>
                                         <div class="col-md-12 text-center">
                                             <input type="submit" class="btn btn-primary btn-lg" value="Send message">
@@ -709,6 +709,9 @@ _________________________________________________________ -->
                                 </div>
 
                             </form>
+
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
                         </div>
 
                     </div>
@@ -725,9 +728,9 @@ _________________________________________________________ -->
         <!-- *** MAP ***
 _________________________________________________________ -->
 
-        <div class="section" id="map">
+        <!-- <div class="section" id="map"> -->
 
-        </div>
+        <!-- </div> -->
         <!-- /.section -->
 
         <!-- *** MAP END *** -->
@@ -788,8 +791,8 @@ _________________________________________________________ -->
 
     <!-- maps -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABbX8pvysXSgEEuBBc__VkoypQ9VBqQw"></script>
-    <script src="js/gmaps.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABbX8pvysXSgEEuBBc__VkoypQ9VBqQw"></script> -->
+    <!-- <script src="js/gmaps.js"></script> -->
 
     <!-- masonry layout -->
     <script src="js/masonry.pkgd.min.js"></script>
@@ -810,6 +813,10 @@ _________________________________________________________ -->
     <!-- main js file -->
 
     <script src="js/front.js"></script>
+
+    <!-- For google form contact -->
+    <script type="text/javascript">var submitted=false;</script>
+    <script src="js/contact.js"></script>
 
     
 
